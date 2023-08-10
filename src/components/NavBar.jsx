@@ -1,20 +1,13 @@
+import './CartWidget'
+
 const NavBar = () => {
     return
     <div>
-        <NavBar/>
+        <p> PRODUCTOS </p>
+        <p> LOCALES </p>
+        <p> CONTACTO </p>
     </div>
 }
 
 export default NavBar;
 
-//CARTIWIDGET
-const CartWidget = ({numero}) => {
-    return (
-        <div>
-        <p> {numero} </p>
-        </div>
-    )
-}
-
-// ItemListContainer
-import './ItemListContainer'

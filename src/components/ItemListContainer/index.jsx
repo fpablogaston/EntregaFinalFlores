@@ -1,5 +1,6 @@
+import '../App'
 
-const TextStyled = ({greeting}) => {
+const ItemListContainer = ({greeting}) => {
     return(
         <p className = "mensaje">{greeting} </p>
     )
