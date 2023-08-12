@@ -8,3 +8,4 @@ const CartWidget = ({numero}) => {
     )
 }
 
+export default CartWidget;

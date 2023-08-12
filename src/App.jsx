@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import './components/NavBar'
-import './components/ItemListContainer'
+import './components/NavBar';
+import './components/ItemListContainer';
+import './components/CartWidget'
 
 function App() {
   return (
