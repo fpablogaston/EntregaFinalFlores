@@ -1,6 +1,6 @@
 
 //CARTIWIDGET
-const CartWidget = ({numero}) => {
+ const CartWidget = ({numero}) => {
     return (
         <div>
         <p> {numero} </p>
@@ -9,3 +9,4 @@ const CartWidget = ({numero}) => {
 }
 
 export default CartWidget;
+

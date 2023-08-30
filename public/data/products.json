@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "name": "Remera",
+        "precio": 20,
+        "category":"ROPA"
+    },
+    {
+        "id":2,
+        "name": "Guantes",
+        "precio": 20,
+        "category":"ACCESORIOS"
+    },
+    {
+        "id":3,
+        "name": "Zapatillas de Running",
+        "precio": 20,
+        "category": "CALZADO"
+    }
+]
