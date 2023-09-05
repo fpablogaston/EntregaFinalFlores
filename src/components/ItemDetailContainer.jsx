@@ -1,16 +1,28 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from 'react'
 import ItemListContainer from "./ItemListContainer"
+import ItemDetail from "./ItemDetail"
 
 export default function ItemDetailContainer() {
     const [detail, setDetail] = useState({})
     const {id} = useParams()
 
+
     useEffect(() => {
-        console.log(id)
+        const getProduct = async () => {
+            const response = await fetch ('/data/products.json')
+            const products = await response.json()
+    
+            const productosFiltrados = products.find(product => product.id === parseInt(id)) 
+    
+            setDetail(productosFiltrados)
+        }
+
+        getProduct()
     }, [id])
 
     return (
-        <div> ItemDetailContainer </div>
+        <ItemDetail detail={detail}/>
+       /* <div> ItemDetailContainer </div>*/
     )
 } 

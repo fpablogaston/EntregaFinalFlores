@@ -9,13 +9,14 @@ export default function Navbar () {
     return ( 
         <NavBar bg='dark' variant='dark' className='p-3'>
         <Container>
-        <NavBar.Brand href='#home'> Tienda Deportiva</NavBar.Brand>
+        <NavBar.Brand href='#home'> <Link to ='/'> Tienda Deportiva </Link> </NavBar.Brand>
         <Nav className='me-auto'>
             {/*<Nav.Link href='#home'> Ropa </Nav.Link>*/}
-    
-    
-    
-        <Link to='/category/ROPA'> ROPA </Link>
+            <Nav.Link as={Link} to='category/ROPA'> Ropa</Nav.Link>
+            <Nav.Link as={Link} to='category/ACCESORIOS'> Accesorios </Nav.Link>
+            <Nav.Link as={Link} to='category/CALZADO'> Calzado </Nav.Link>
+
+       {/* <Link to='/category/ROPA'> ROPA </Link>
         <Link to='/category/ACCESORIOS'> ACCESORIOS </Link>
         <Link to='/category/CALZADO'> CALZADO </Link>
 
