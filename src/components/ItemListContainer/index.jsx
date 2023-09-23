@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
@@ -6,13 +5,47 @@ import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 
-export default function ItemListContainer () { 
-/*const ItemListContainer = ({greeting}) => {
+import React, { useEffect, useState} from 'react'
+import Item from '../../components/Item/ItemList'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../firebase/client'
+
+  
+    //firebase II
+    function ItemListContainer () {
+        const [products, setProducts] = useState([])   
+    
+     /*
+    const ref = collection(db, 'products')
+    const getProducts = async () => { 
+        const data = await getDocs(ref)
+        const dataFiltrada = data.docs.map((doc) => ({... doc.data(), id: doc.id}))
+        console.log(dataFiltrada) 
+        setProducts(dataFiltrada)
+    }
+        
+        useEffect(() => {
+          getProducts()
+        }, []) 
+    */
+        return (
+            <div>
+                {products.map(product => (
+                    <Item key={product.id} product={product}/>
+                ))}
+            </div>
+        )            
+    }
+
+
+
+      /*export default function ItemListContainer () { 
+const ItemListContainer = ({greeting}) => {
     return(
         <p className = "mensaje">{greeting} </p>
         
     )*/
-    const [items, setItems] = useState([])
+   /* const [items, setItems] = useState([])
     const {id} = useParams()
 
     useEffect(() => {     
@@ -25,10 +58,10 @@ export default function ItemListContainer () {
         if(productosFiltrados.length > 0) return setItems(productosFiltrados)
 
         setItems(products)
-    }
+    } */
 
-    getProducts()
-    },[id])
+
+/*
 
     return ( 
     
@@ -37,12 +70,12 @@ export default function ItemListContainer () {
                 {items.map(item => (
                 <Col key={item.id} lg={4} className='mb-4'>
                 <Card>
-                        {/*<Card.Img variant='top' src={img}/>  */}
-                        <Card.Body>
+                        {/*<Card.Img variant='top' src={img}/>  */
+                   /*     <Card.Body>
                             <Card.Title> {item.name}</Card.Title>
                              <Card.Text> {item.description} </Card.Text> 
-                            {/*<Button Variant='dark'> View more </Button>*/}
-                           <Link to={`/item/${item.id}`}> View more </Link>
+                            {/*<Button Variant='dark'> View more </Button>*/
+                        /*   <Link to={`/item/${item.id}`}> View more </Link>
                         </Card.Body>
                     </Card>
                   
@@ -50,6 +83,10 @@ export default function ItemListContainer () {
                   ))}
             </Row>
                 </Container>  
-    )
+    ) 
 } 
+
+*/
+
+export default ItemListContainer    
 

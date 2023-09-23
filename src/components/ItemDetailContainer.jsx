@@ -25,4 +25,4 @@ export default function ItemDetailContainer() {
         <ItemDetail detail={detail}/>
        /* <div> ItemDetailContainer </div>*/
     )
-} 
+}

@@ -16,16 +16,14 @@ export const CartContextProvider = ({ children }) => {
         setTotalCarrito(0)
     }
 
-    /*useEffect (( ) => {
+  /*  useEffect (( ) => {
         setProductos(mockProductos)
-    }, [])*/
+    }, []) */
 
-    function App () { 
     return (  
     <CartContext.Provider value={{productos, setProductos, cart, setCart, totalCarrito,
             setTotalCarrito, vaciarCarrito, user, setUser}}>
                 {children}
             </CartContext.Provider>
     )
-}
 }
