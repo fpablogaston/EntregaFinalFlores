@@ -1,9 +1,7 @@
-import { createContext, useEffect, useState } from "react"
+import { createContext, useState } from "react"
 
-//creamos el contexto con createContext
+
 export const CartContext = createContext()
-
-//creamoss un componente para nuestro contexto
 
 export const CartContextProvider = ({ children }) => {
     const [productos, setProductos] = useState([])
@@ -15,10 +13,6 @@ export const CartContextProvider = ({ children }) => {
         setCart([])
         setTotalCarrito(0)
     }
-
-  /*  useEffect (( ) => {
-        setProductos(mockProductos)
-    }, []) */
 
     return (  
     <CartContext.Provider value={{productos, setProductos, cart, setCart, totalCarrito,

@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from 'react'
-import ItemListContainer from "./ItemListContainer"
 import ItemDetail from "./ItemDetail"
 
 export default function ItemDetailContainer() {
@@ -23,6 +22,5 @@ export default function ItemDetailContainer() {
 
     return (
         <ItemDetail detail={detail}/>
-       /* <div> ItemDetailContainer </div>*/
     )
 }

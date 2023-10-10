@@ -1,5 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react'
-import { CartContext  } from './context/CartContext'
+import React, {useState} from 'react'
 
 
 export const ItemDetail = ({ id, name, img, category, description, price, stock, detail}) => {
@@ -47,27 +46,3 @@ export const ItemDetail = ({ id, name, img, category, description, price, stock,
 
 export default ItemDetail
 
-
-    /*
-  //CartContext
-  const ItemDetail = ({ id, name, img, category, description, price, stock, detail}) => {
-    const [quantityAdded, setQuantityAdded ] = useState(0)
-    const {addItem} = useContext(CartContext)
-
-  const handleOnAdd = (quantity) => {
-    setQuantityAdded(quantity)
-
-  const item = {
-    id, name, price
-  }
-
-  addItem(item, quantity)
-} 
-
-return (
-    <div> 
-        <button onClick={() => handleOnAdd(quantityAdded + 1)}>Agregar al carrito</button>
-    </div>
-)
-  }
-*/

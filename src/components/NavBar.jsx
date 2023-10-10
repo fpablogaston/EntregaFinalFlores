@@ -11,7 +11,6 @@ export default function Navbar () {
       <Container>
         <NavBar.Brand href='#home'> <Link to ='/'> Tienda Deportiva </Link> </NavBar.Brand>
         <Nav className='me-auto'>
-            {/*<Nav.Link href='#home'> Ropa </Nav.Link>*/}
             <Nav.Link as={Link} to='category/ROPA'> Ropa</Nav.Link>
             <Nav.Link as={Link} to='category/ACCESORIOS'> Accesorios </Nav.Link>
             <Nav.Link as={Link} to='category/CALZADO'> Calzado </Nav.Link>
